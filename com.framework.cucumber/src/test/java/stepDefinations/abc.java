@@ -16,7 +16,7 @@ public class abc{
 	
 	private void syso() {
 		// TODO Auto-generated method stub
-
+System.out.print("hello git");
 	}
 	/*
 	
