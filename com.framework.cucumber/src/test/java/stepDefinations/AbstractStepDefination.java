@@ -24,17 +24,17 @@ import cucumber.api.java.en.When;
 
 public class AbstractStepDefination {
 
-public static WebDriver driver;
+//public static WebDriver driver;
 	
 	//@Given("^User is on login page$")
 @Before
 	public void before() {
-		
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Meenu\\Desktop\\selenium\\chromedriver_win32 (2)\\chromedriver.exe");
+System.out.println("before scenario");		
+		//System.setProperty("webdriver.chrome.driver", "C:\\Users\\Meenu\\Desktop\\selenium\\chromedriver_win32 (2)\\chromedriver.exe");
 
-		driver=new ChromeDriver();
-		driver.get("http://newtours.demoaut.com/");
-		driver.manage().window().maximize();
+		//driver=new ChromeDriver();
+		//driver.get("http://newtours.demoaut.com/");
+		//driver.manage().window().maximize();
 		
 		//driver.findElement(By.name("userName")).sendKeys("batman");
 		//driver.findElement(By.name("password")).sendKeys("batman");
@@ -45,10 +45,10 @@ public static WebDriver driver;
 	}
 
 @After
-public void tearDown(Scenario s)
+public void aaatearDown(Scenario s)
 {
-
-	if(s.isFailed())
+System.out.println("after scenario");
+	/*if(s.isFailed())
 	{
 		TakesScreenshot ts=(TakesScreenshot)driver;
 		
@@ -75,7 +75,7 @@ Date date=new Date();
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-	}
+	}*/
 	
 	
 	
@@ -111,7 +111,7 @@ public void login_Successful() {
 
 @When("^Enter the wrong Username and Password$")
 public void enter_the_wrong_Username_and_Password() {
-	driver.get("http://www.google.com/");
+	//driver.get("http://www.google.com/");
 	System.out.println("Enter the wrong Username and Password");
 	//driver.findElement(By.name("userName")).sendKeys("1batman");
 	//driver.findElement(By.name("password")).sendKeys("1batman");
